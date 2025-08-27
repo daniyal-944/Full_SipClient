@@ -1,0 +1,298 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 28 2025 00:37:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=1e4fch (124156) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0002e524 vaddr=3fc99f00 size=01af4h (  6900) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=92ce8h (601320) map[0m
+[0;32mI (236) esp_image: segment 3: paddr=000c2d10 vaddr=3fc9b9f4 size=02f4ch ( 12108) load[0m
+[0;32mI (239) esp_image: segment 4: paddr=000c5c64 vaddr=40374000 size=15e0ch ( 89612) load[0m
+[0;32mI (270) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (271) boot: Disabling RNG early entropy source...[0m
+[0;32mI (282) cpu_start: Multicore app[0m
+[0;32mI (283) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (283) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (285) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (291) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (296) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (301) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (307) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (312) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (318) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (330) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (336) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (340) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (345) esp_psram: Speed: 80MHz[0m
+[0;32mI (349) cpu_start: Pro cpu up.[0m
+[0;32mI (353) cpu_start: Starting app cpu, entry point is 0x40375660[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (811) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (820) cpu_start: Pro cpu start user code[0m
+[0;32mI (820) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (820) cpu_start: Application information:[0m
+[0;32mI (823) cpu_start: Project name:     my_headset_fw[0m
+[0;32mI (829) cpu_start: App version:      f56ef4b-dirty[0m
+[0;32mI (834) cpu_start: Compile time:     Aug 28 2025 01:47:29[0m
+[0;32mI (840) cpu_start: ELF file SHA256:  77be40c0af7900f4...[0m
+[0;32mI (846) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (852) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (856) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (861) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (866) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (873) heap_init: At 3FCA5518 len 000441F8 (272 KiB): DRAM[0m
+[0;32mI (879) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (886) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (892) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (899) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (907) spi_flash: detected chip: gd[0m
+[0;32mI (910) spi_flash: flash io: dio[0m
+[0;33mW (914) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (928) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (934) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (942) app_start: Starting scheduler on CPU0[0m
+[0;32mI (946) app_start: Starting scheduler on CPU1[0m
+[0;32mI (946) main_task: Started on CPU0[0m
+[0;32mI (956) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+[0;32mI (968) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (975) UAC2-SIP-HEADSET:  ESP32-S3 UAC2 Headset + SIP Client[0m
+[0;32mI (982) UAC2-SIP-HEADSET:          Phase 2A: RTP Audio Bridge[0m
+[0;32mI (988) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (1007) UAC2-SIP-HEADSET: Audio Configuration:[0m
+[0;32mI (1007) UAC2-SIP-HEADSET:    Sample Rate: 48000 Hz[0m
+[0;32mI (1008) UAC2-SIP-HEADSET:    Channels: 1 (mono)[0m
+[0;32mI (1012) UAC2-SIP-HEADSET:    Bits per Sample: 16[0m
+[0;32mI (1018) UAC2-SIP-HEADSET:    Volume Boost: 100%[0m
+[0;32mI (1023) UAC2-SIP-HEADSET:    Startup Fade: 20 callbacks (~200ms)[0m
+[0;32mI (1030) UAC2-SIP-HEADSET: Hardware Configuration:[0m
+[0;32mI (1035) UAC2-SIP-HEADSET:    Speaker: DISABLED[0m
+[0;32mI (1040) UAC2-SIP-HEADSET:    Microphone: DISABLED[0m
+[0;32mI (1046) UAC2-SIP-HEADSET:    Mute Button: GPIO 10 (Active Low)[0m
+[0;32mI (1053) UAC2-SIP-HEADSET: SIP Configuration:[0m
+[0;32mI (1058) UAC2-SIP-HEADSET:    Server: 37.58.58.217:5060[0m
+[0;32mI (1063) UAC2-SIP-HEADSET:    User: testclient[0m
+[0;32mI (1069) UAC2-SIP-HEADSET:    Wi-Fi: HUAWEI-5G-aFY9[0m
+[0;32mI (1074) UAC2-SIP-HEADSET: RTP Configuration:[0m
+[0;32mI (1079) UAC2-SIP-HEADSET:    Local Port: 20000[0m
+[0;32mI (1084) UAC2-SIP-HEADSET:    Packet Interval: 20 ms[0m
+[0;32mI (1090) UAC2-SIP-HEADSET:    Audio Buffer: 960 samples (20.0 ms)[0m
+[0;32mI (1097) UAC2-SIP-HEADSET:    Codec: G.711 μ-law (Opus planned)[0m
+[0;32mI (1104) UAC2-SIP-HEADSET: Device Identity:[0m
+[0;32mI (1108) UAC2-SIP-HEADSET:    Device Name: ESP32-S3 SIP Headset[0m
+[0;32mI (1115) UAC2-SIP-HEADSET:    Manufacturer: ESP32 Audio Systems[0m
+[0;32mI (1122) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (1129) UAC2-SIP-HEADSET: Starting Wi-Fi initialization...[0m
+[0;32mI (1135) UAC2-SIP-HEADSET: Initializing Wi-Fi...[0m
+[0;32mI (1142) pp: pp rom version: e7ae62f[0m
+[0;32mI (1145) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1151) wifi:wifi driver task: 3fcb7f74, prio:23, stack:6656, core=0[0m
+[0;32mI (1163) wifi:wifi firmware version: 02461b5[0m
+[0;32mI (1164) wifi:wifi certification version: v7.0[0m
+[0;32mI (1164) wifi:config NVS flash: enabled[0m
+[0;32mI (1168) wifi:config nano formating: disabled[0m
+[0;32mI (1172) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1177) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1181) wifi:Init management short buffer num: 32[0m
+[0;32mI (1186) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1190) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1194) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1198) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1202) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1206) wifi_init: rx ba win: 6[0m
+[0;32mI (1210) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1214) wifi_init: udp mbox: 6[0m
+[0;32mI (1217) wifi_init: tcp mbox: 6[0m
+[0;32mI (1221) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1226) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1230) wifi_init: tcp mss: 1440[0m
+[0;32mI (1234) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1238) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1245) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (1286) wifi:mode : sta (f0:f5:bd:43:6f:2c)[0m
+[0;32mI (1286) wifi:enable tsf[0m
+[0;32mI (1288) UAC2-SIP-HEADSET: Wi-Fi station initialized. Connecting to HUAWEI-5G-aFY9...[0m
+[0;32mI (1290) UAC2-SIP-HEADSET: Initializing mute button...[0m
+[0;32mI (1296) UAC2-SIP-HEADSET: Initializing mute button on GPIO 10...[0m
+[0;32mI (1303) gpio: GPIO[10]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (1312) UAC2-SIP-HEADSET: Mute button initialized (GPIO 10, Active Low)[0m
+[0;32mI (1319) UAC2-SIP-HEADSET:    Press button to toggle mute/unmute[0m
+[0;32mI (1326) UAC2-SIP-HEADSET:    Hold for 2+ seconds for long press action[0m
+[0;32mI (1333) UAC2-SIP-HEADSET: Initializing headset hardware...[0m
+[0;32mI (1339) UAC2-SIP-HEADSET: Initializing audio bridge...[0m
+[0;32mI (1345) UAC2-SIP-HEADSET: Initializing lightweight audio bridge...[0m
+[0;32mI (1354) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1[0m
+[0;32mI (1359) wifi:state: init -> auth (b0)[0m
+[0;32mI (1363) UAC2-SIP-HEADSET: RTP bridge task started[0m
+[0;32mI (1367) UAC2-SIP-HEADSET: Lightweight audio bridge initialized[0m
+[0;32mI (1374) UAC2-SIP-HEADSET: Hardware stabilization...[0m
+[0;32mI (2363) wifi:state: auth -> init (200)[0m
+[0;32mI (2366) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1[0m
+[0;32mI (2368) UAC2-SIP-HEADSET: Retry connecting to Wi-Fi (1/10)[0m
+[0;32mI (2880) UAC2-SIP-HEADSET: Testing headset hardware...[0m
+[0;32mI (2880) UAC2-SIP-HEADSET: Testing mute button...[0m
+[0;32mI (2880) UAC2-SIP-HEADSET:    Button state: RELEASED (level=1)[0m
+[0;32mI (2886) UAC2-SIP-HEADSET: Headset test completed[0m
+[0;32mI (4392) UAC2-SIP-HEADSET: Initializing UAC2 device...[0m
+[0;32mI (4393) usbd_uac: UAC Device Start, Version: 1.2.0[0m
+[0;32mI (4393) UAC2-SIP-HEADSET: [0m
+[0;32mI (4396) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (4403) UAC2-SIP-HEADSET:   RTP AUDIO BRIDGE READY![0m
+[0;32mI (4408) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (4416) UAC2-SIP-HEADSET: [0m
+[0;32mI (4419) UAC2-SIP-HEADSET: ✓ USB Audio Device: Ready for Android/PC[0m
+[0;32mI (4426) UAC2-SIP-HEADSET: ✓ Wi-Fi: Connecting to HUAWEI-5G-aFY9...[0m
+[0;32mI (4433) UAC2-SIP-HEADSET: ✓ SIP Client: Will auto-register when Wi-Fi connects[0m
+[0;32mI (4442) UAC2-SIP-HEADSET: ✓ RTP Engine: G.711 μ-law codec ready[0m
+[0;32mI (4448) UAC2-SIP-HEADSET: ✓ Audio Bridge: USB ↔ SIP routing ACTIVE[0m
+[0;32mI (4456) UAC2-SIP-HEADSET: ✓ Mute Button: Press to toggle microphone[0m
+[0;32mI (4463) UAC2-SIP-HEADSET: [0m
+[0;32mI (4466) UAC2-SIP-HEADSET: Audio Flow:[0m
+[0;32mI (4471) UAC2-SIP-HEADSET:    Android → USB → ESP32 → RTP → SIP Server[0m
+[0;32mI (4479) UAC2-SIP-HEADSET:    Android ← USB ← ESP32 ← RTP ← SIP Server[0m
+[0;32mI (4487) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (4778) UAC2-SIP-HEADSET: Retry connecting to Wi-Fi (2/10)[0m
+[0;32mI (4836) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1[0m
+[0;32mI (4836) wifi:state: init -> auth (b0)[0m
+[0;32mI (4841) wifi:state: auth -> assoc (0)[0m
+[0;32mI (4857) wifi:state: assoc -> run (10)[0m
+[0;32mI (4903) wifi:connected with HUAWEI-5G-aFY9, aid = 7, channel 11, BW20, bssid = 96:90:10:5e:29:18[0m
+[0;32mI (4903) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (4907) wifi:pm start, type: 1[0m
+
+[0;32mI (4908) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4916) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (4940) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5150) wifi:<ba-add>idx:0 (ifx:0, 96:90:10:5e:29:18), tid:0, ssn:0, winSize:64[0m
+[0;32mI (5150) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (5160) wifi:<ba-add>idx:0 (ifx:0, 96:90:10:5e:29:18), tid:0, ssn:0, winSize:64[0m
+[0;32mI (7926) esp_netif_handlers: sta ip: 192.168.18.55, mask: 255.255.255.0, gw: 192.168.18.1[0m
+[0;32mI (7927) UAC2-SIP-HEADSET: Wi-Fi connected! IP: 192.168.18.55[0m
+[0;32mI (7931) UAC2-SIP-HEADSET: Starting SIP client...[0m
+[0;32mI (7937) UAC2-SIP-HEADSET: 🔍 Testing SIP server connectivity...[0m
+[0;32mI (7945) UAC2-SIP-HEADSET: ✅ Network path to SIP server seems OK[0m
+[0;32mI (7951) UAC2-SIP-HEADSET: Initializing SIP client with RTP support...[0m
+[0;32mI (7958) UAC2-SIP-HEADSET: Initializing RTP session...[0m
+[0;32mI (7964) UAC2-SIP-HEADSET: RTP session initialized:[0m
+[0;32mI (7969) UAC2-SIP-HEADSET:   SSRC: 0x91fedf1a[0m
+[0;32mI (7974) UAC2-SIP-HEADSET:   Local port: 20000[0m
+[0;32mI (7979) UAC2-SIP-HEADSET:   Payload type: 0 (G.711 μ-law)[0m
+[0;32mI (7985) UAC2-SIP-HEADSET: SIP client with RTP support initialized[0m
+[0;32mI (7985) UAC2-SIP-HEADSET: SIP client task started[0m
+[0;32mI (7998) UAC2-SIP-HEADSET: SIP socket created and bound to port 5060[0m
+[0;32mI (8005) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (8011) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (8016) UAC2-SIP-HEADSET:    Target: 37.58.58.217:5060[0m
+[0;32mI (8022) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (8028) UAC2-SIP-HEADSET:    User: testclient[0m
+[0;32mI (8033) UAC2-SIP-HEADSET:    Call-ID: cd2f35fd@192.168.18.55[0m
+[0;32mI (8040) UAC2-SIP-HEADSET:    CSeq: 2[0m
+[0;32mI (8044) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (8050) UAC2-SIP-HEADSET: REGISTER sip:37.58.58.217:5060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:5060;branch=z9hG4bK5be800a7
+Max-Forwards: 70
+From: <sip:testclient@37.58.58.217:5060>;tag=82fa6b80
+To: <sip:testclient@37.58.58.217:5060>
+Call-ID: cd2f35fd@192.168.18.55
+CSeq: 2 REGISTER
+Contact: <sip:testclient@192.168.18.55:5060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (8087) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (8094) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (380 bytes) - Waiting for response...[0m
+[0;32mI (14981) wifi:<ba-add>idx:1 (ifx:0, 96:90:10:5e:29:18), tid:6, ssn:1, winSize:64[0m
+[0;33mW (18202) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (18302) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (18302) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (18302) UAC2-SIP-HEADSET:    Target: 37.58.58.217:5060[0m
+[0;32mI (18308) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (18314) UAC2-SIP-HEADSET:    User: testclient[0m
+[0;32mI (18319) UAC2-SIP-HEADSET:    Call-ID: 999583bf@192.168.18.55[0m
+[0;32mI (18326) UAC2-SIP-HEADSET:    CSeq: 3[0m
+[0;32mI (18330) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (18336) UAC2-SIP-HEADSET: REGISTER sip:37.58.58.217:5060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:5060;branch=z9hG4bK94a15163
+Max-Forwards: 70
+From: <sip:testclient@37.58.58.217:5060>;tag=9e4a1ad3
+To: <sip:testclient@37.58.58.217:5060>
+Call-ID: 999583bf@192.168.18.55
+CSeq: 3 REGISTER
+Contact: <sip:testclient@192.168.18.55:5060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (18374) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (18381) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (380 bytes) - Waiting for response...[0m
+[0;32mI (19494) UAC2-SIP-HEADSET: System Status #1:[0m
+[0;32mI (19496) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (19497) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (19501) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (19506) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (19511) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (19517) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (19523) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (19527) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (19532) UAC2-SIP-HEADSET: Free heap: 8557584 bytes[0m
+[0;32mI (19538) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (19545) UAC2-SIP-HEADSET: [0m
+[0;33mW (28489) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (28589) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (28589) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (28589) UAC2-SIP-HEADSET:    Target: 37.58.58.217:5060[0m
+[0;32mI (28595) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (28601) UAC2-SIP-HEADSET:    User: testclient[0m
+[0;32mI (28606) UAC2-SIP-HEADSET:    Call-ID: 9f03eb59@192.168.18.55[0m
+[0;32mI (28613) UAC2-SIP-HEADSET:    CSeq: 4[0m
+[0;32mI (28617) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (28623) UAC2-SIP-HEADSET: REGISTER sip:37.58.58.217:5060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:5060;branch=z9hG4bKdf277f69
+Max-Forwards: 70
+From: <sip:testclient@37.58.58.217:5060>;tag=87ab9ef4
+To: <sip:testclient@37.58.58.217:5060>
+Call-ID: 9f03eb59@192.168.18.55
+CSeq: 4 REGISTER
+Contact: <sip:testclient@192.168.18.55:5060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (28661) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (28668) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (380 bytes) - Waiting for response...[0m
+[0;32mI (34548) UAC2-SIP-HEADSET: System Status #2:[0m
+[0;32mI (34549) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (34551) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (34555) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (34560) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (34565) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (34571) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (34577) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (34581) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (34586) UAC2-SIP-HEADSET: Free heap: 8557584 bytes[0m
+[0;32mI (34592) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (34599) UAC2-SIP-HEADSET: [0m

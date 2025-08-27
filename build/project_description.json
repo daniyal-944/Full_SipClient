@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "my_headset_fw",
-    "project_version":    "87404ec-dirty",
+    "project_version":    "f56ef4b-dirty",
     "project_path":       "F:/Full_SipClient/Full_SipClient",
     "idf_path":           "F:/Espressif/frameworks/esp-idf-v5.1.6",
     "build_dir":          "F:/Full_SipClient/Full_SipClient/build",

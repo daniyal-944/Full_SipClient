@@ -60,10 +60,10 @@ static const char *TAG = "UAC2-SIP-HEADSET";
 #define WIFI_RETRY_MAX 10
 
 // SIP Configuration
-#define SIP_SERVER_HOST "78.46.21.240"  
-#define SIP_USER        "1001"           
-#define SIP_PASSWORD    "3569test@@"    
-#define SIP_SERVER_PORT 35060
+#define SIP_SERVER_HOST "37.58.58.217"  
+#define SIP_USER        "testclient"           
+#define SIP_PASSWORD    "test123"    
+#define SIP_SERVER_PORT 5060
 
 // #define SIP_SERVER_HOST "sip.linphone.org"  // Free test server
 // #define SIP_SERVER_PORT 5060                // Standard SIP port
@@ -200,6 +200,7 @@ typedef struct
     uint32_t last_keepalive;
     uint32_t registration_retry_count;
     int socket_fd;
+    uint16_t sip_local_port;
     char call_id[64];
     char from_tag[32];
     char to_tag[32]; // Added for call state
@@ -904,29 +905,30 @@ static esp_err_t sip_send_register_with_auth(const char *auth_header)
     sip_client.cseq++;
 
     snprintf(register_msg, sizeof(register_msg),
-             "REGISTER sip:%s:%d SIP/2.0\r\n"
-             "Via: SIP/2.0/UDP " IPSTR ":%d;branch=z9hG4bK%08" PRIx32 "\r\n"
-             "Max-Forwards: 70\r\n"
-             "From: <sip:%s@%s:%d>;tag=%s\r\n"
-             "To: <sip:%s@%s:%d>\r\n"
-             "Call-ID: %s\r\n"
-             "CSeq: %" PRIu32 " REGISTER\r\n"
-             "Contact: <sip:%s@" IPSTR ":%d>\r\n"
-             "Authorization: Digest username=\"%s\", realm=\"%s\", nonce=\"%s\", "
-             "uri=\"sip:%s:%d\", response=\"%s\"\r\n"
-             "Expires: 3600\r\n"
-             "User-Agent: ESP32-S3-UAC-SIP/1.0\r\n"
-             "Content-Length: 0\r\n"
-             "\r\n",
-             SIP_SERVER_HOST, SIP_SERVER_PORT,
-             IP2STR(&wifi_state.ip), SIP_SERVER_PORT, esp_random(),
-             SIP_USER, SIP_SERVER_HOST, SIP_SERVER_PORT, sip_client.from_tag,
-             SIP_USER, SIP_SERVER_HOST, SIP_SERVER_PORT,
-             sip_client.call_id,
-             sip_client.cseq,
-             SIP_USER, IP2STR(&wifi_state.ip), SIP_SERVER_PORT,
-             SIP_USER, realm, nonce,
-             SIP_SERVER_HOST, SIP_SERVER_PORT, response_hash);
+            "REGISTER sip:%s:%d SIP/2.0\r\n"
+            "Via: SIP/2.0/UDP " IPSTR ":%u;rport;branch=z9hG4bK%08" PRIx32 "\r\n"
+            "Max-Forwards: 70\r\n"
+            "From: <sip:%s@%s>;tag=%s\r\n"
+            "To: <sip:%s@%s>\r\n"
+            "Call-ID: %s\r\n"
+            "CSeq: %" PRIu32 " REGISTER\r\n"
+            "Contact: <sip:%s@" IPSTR ":%u>\r\n"
+            "Authorization: Digest username=\"%s\", realm=\"%s\", nonce=\"%s\", "
+            "uri=\"sip:%s:%d\", response=\"%s\"\r\n"
+            "Expires: 60\r\n"
+            "User-Agent: ESP32-S3-UAC-SIP/1.0\r\n"
+            "Content-Length: 0\r\n"
+            "\r\n",
+            SIP_SERVER_HOST, SIP_SERVER_PORT,                  // Request-URI: server:port
+            IP2STR(&wifi_state.ip), sip_client.sip_local_port, // Via: local port + rport
+            esp_random(),
+            SIP_USER, SIP_SERVER_HOST, sip_client.from_tag,    // From: user@server (no :port)
+            SIP_USER, SIP_SERVER_HOST,                         // To:   user@server (no :port)
+            sip_client.call_id,
+            sip_client.cseq,
+            SIP_USER, IP2STR(&wifi_state.ip), sip_client.sip_local_port, // Contact: local port
+            SIP_USER, realm, nonce,
+            SIP_SERVER_HOST, SIP_SERVER_PORT, response_hash);
 
     ESP_LOGI(TAG, "Sending SIP REGISTER with authentication");
 
@@ -1397,9 +1399,13 @@ static void sip_client_task(void *param)
         }
 
         // Create UDP socket for SIP
+        if (sip_client.sip_local_port == 0) {
+            sip_client.sip_local_port = SIP_SERVER_PORT;
+        }
+        // Create UDP socket for SIP, then bind it to sip_client.sip_local_port
         if (sip_client.socket_fd < 0)
         {
-            sip_client.socket_fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
+            sip_client.socket_fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
             if (sip_client.socket_fd < 0)
             {
                 ESP_LOGE(TAG, "Unable to create SIP socket: errno %d", errno);
@@ -1407,13 +1413,33 @@ static void sip_client_task(void *param)
                 continue;
             }
 
-            // Set socket timeout
+            // Allow address reuse (optional but helpful during dev)
+            int opt = 1;
+            setsockopt(sip_client.socket_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+
+            // Bind to local port (INADDR_ANY for the interface)
+            struct sockaddr_in local_addr;
+            memset(&local_addr, 0, sizeof(local_addr));
+            local_addr.sin_family = AF_INET;
+            local_addr.sin_addr.s_addr = htonl(INADDR_ANY); // bind to all local interfaces
+            local_addr.sin_port = htons(sip_client.sip_local_port);
+
+            if (bind(sip_client.socket_fd, (struct sockaddr *)&local_addr, sizeof(local_addr)) < 0)
+            {
+                ESP_LOGE(TAG, "bind() failed: errno %d (port %u)", errno, sip_client.sip_local_port);
+                close(sip_client.socket_fd);
+                sip_client.socket_fd = -1;
+                vTaskDelay(pdMS_TO_TICKS(5000));
+                continue;
+            }
+
+            // Set receive timeout as before
             struct timeval timeout;
             timeout.tv_sec = 5;
             timeout.tv_usec = 0;
             setsockopt(sip_client.socket_fd, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof timeout);
 
-            ESP_LOGI(TAG, "SIP socket created");
+            ESP_LOGI(TAG, "SIP socket created and bound to port %u", sip_client.sip_local_port);
         }
 
         // Handle SIP state machine
