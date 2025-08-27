@@ -55,8 +55,8 @@ static const char *TAG = "UAC2-SIP-HEADSET";
 #define DMA_BUF_LEN 256
 
 // Wi-Fi Configuration
-#define WIFI_SSID "ayounas"
-#define WIFI_PASSWORD "asdf1234"
+#define WIFI_SSID "HUAWEI-5G-aFY9"
+#define WIFI_PASSWORD "KUCHBHI!!!"
 #define WIFI_RETRY_MAX 10
 
 // SIP Configuration
@@ -1498,11 +1498,11 @@ static void sip_client_task(void *param)
     }
 }
 
-sudo iptables -F
-sudo iptables -t nat -F
-sudo iptables -A FORWARD -i wlp0s20f3 -o proton0 -j ACCEPT
-sudo iptables -A FORWARD -i proton0 -o wlp0s20f3 -m state --state ESTABLISHED,RELATED -j ACCEPT
-sudo iptables -t nat -A POSTROUTING -o proton0 -j MASQUERADE
+// sudo iptables -F
+// sudo iptables -t nat -F
+// sudo iptables -A FORWARD -i wlp0s20f3 -o proton0 -j ACCEPT
+// sudo iptables -A FORWARD -i proton0 -o wlp0s20f3 -m state --state ESTABLISHED,RELATED -j ACCEPT
+// sudo iptables -t nat -A POSTROUTING -o proton0 -j MASQUERADE
 
 
 

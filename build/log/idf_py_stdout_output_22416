@@ -1,0 +1,1245 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e20
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.6-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 28 2025 00:37:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=1e4ach (124076) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0002e4d4 vaddr=3fc99f00 size=01b44h (  6980) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=92c30h (601136) map[0m
+[0;32mI (236) esp_image: segment 3: paddr=000c2c58 vaddr=3fc9ba44 size=02efch ( 12028) load[0m
+[0;32mI (238) esp_image: segment 4: paddr=000c5b5c vaddr=40374000 size=15e0ch ( 89612) load[0m
+[0;32mI (270) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (271) boot: Disabling RNG early entropy source...[0m
+[0;32mI (282) cpu_start: Multicore app[0m
+[0;32mI (283) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (283) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (285) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (291) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (296) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (301) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (306) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (312) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (318) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (330) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (336) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (340) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (345) esp_psram: Speed: 80MHz[0m
+[0;32mI (349) cpu_start: Pro cpu up.[0m
+[0;32mI (353) cpu_start: Starting app cpu, entry point is 0x40375660[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (811) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (820) cpu_start: Pro cpu start user code[0m
+[0;32mI (820) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (820) cpu_start: Application information:[0m
+[0;32mI (823) cpu_start: Project name:     my_headset_fw[0m
+[0;32mI (829) cpu_start: App version:      87404ec-dirty[0m
+[0;32mI (834) cpu_start: Compile time:     Aug 28 2025 00:31:55[0m
+[0;32mI (840) cpu_start: ELF file SHA256:  3cf2326f9a924a64...[0m
+[0;32mI (846) cpu_start: ESP-IDF:          v5.1.6-dirty[0m
+[0;32mI (852) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (856) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (861) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (866) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (873) heap_init: At 3FCA5518 len 000441F8 (272 KiB): DRAM[0m
+[0;32mI (879) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (886) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (892) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (899) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (907) spi_flash: detected chip: gd[0m
+[0;32mI (910) spi_flash: flash io: dio[0m
+[0;33mW (914) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (928) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (934) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (942) app_start: Starting scheduler on CPU0[0m
+[0;32mI (946) app_start: Starting scheduler on CPU1[0m
+[0;32mI (946) main_task: Started on CPU0[0m
+[0;32mI (956) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (964) main_task: Calling app_main()[0m
+[0;32mI (968) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (975) UAC2-SIP-HEADSET:  ESP32-S3 UAC2 Headset + SIP Client[0m
+[0;32mI (982) UAC2-SIP-HEADSET:          Phase 2A: RTP Audio Bridge[0m
+[0;32mI (988) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (1001) UAC2-SIP-HEADSET: Audio Configuration:[0m
+[0;32mI (1001) UAC2-SIP-HEADSET:    Sample Rate: 48000 Hz[0m
+[0;32mI (1006) UAC2-SIP-HEADSET:    Channels: 1 (mono)[0m
+[0;32mI (1011) UAC2-SIP-HEADSET:    Bits per Sample: 16[0m
+[0;32mI (1017) UAC2-SIP-HEADSET:    Volume Boost: 100%[0m
+[0;32mI (1022) UAC2-SIP-HEADSET:    Startup Fade: 20 callbacks (~200ms)[0m
+[0;32mI (1029) UAC2-SIP-HEADSET: Hardware Configuration:[0m
+[0;32mI (1034) UAC2-SIP-HEADSET:    Speaker: DISABLED[0m
+[0;32mI (1040) UAC2-SIP-HEADSET:    Microphone: DISABLED[0m
+[0;32mI (1045) UAC2-SIP-HEADSET:    Mute Button: GPIO 10 (Active Low)[0m
+[0;32mI (1052) UAC2-SIP-HEADSET: SIP Configuration:[0m
+[0;32mI (1057) UAC2-SIP-HEADSET:    Server: 78.46.21.240:35060[0m
+[0;32mI (1063) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (1067) UAC2-SIP-HEADSET:    Wi-Fi: HUAWEI-5G-aFY9[0m
+[0;32mI (1073) UAC2-SIP-HEADSET: RTP Configuration:[0m
+[0;32mI (1078) UAC2-SIP-HEADSET:    Local Port: 20000[0m
+[0;32mI (1083) UAC2-SIP-HEADSET:    Packet Interval: 20 ms[0m
+[0;32mI (1089) UAC2-SIP-HEADSET:    Audio Buffer: 960 samples (20.0 ms)[0m
+[0;32mI (1095) UAC2-SIP-HEADSET:    Codec: G.711 μ-law (Opus planned)[0m
+[0;32mI (1102) UAC2-SIP-HEADSET: Device Identity:[0m
+[0;32mI (1107) UAC2-SIP-HEADSET:    Device Name: ESP32-S3 SIP Headset[0m
+[0;32mI (1114) UAC2-SIP-HEADSET:    Manufacturer: ESP32 Audio Systems[0m
+[0;32mI (1120) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (1127) UAC2-SIP-HEADSET: Starting Wi-Fi initialization...[0m
+[0;32mI (1134) UAC2-SIP-HEADSET: Initializing Wi-Fi...[0m
+[0;32mI (1140) pp: pp rom version: e7ae62f[0m
+[0;32mI (1143) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1150) wifi:wifi driver task: 3fcb7d24, prio:23, stack:6656, core=0[0m
+[0;32mI (1157) wifi:wifi firmware version: 02461b5[0m
+[0;32mI (1159) wifi:wifi certification version: v7.0[0m
+[0;32mI (1163) wifi:config NVS flash: enabled[0m
+[0;32mI (1166) wifi:config nano formating: disabled[0m
+[0;32mI (1171) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1176) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1180) wifi:Init management short buffer num: 32[0m
+[0;32mI (1184) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1188) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1192) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1196) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1200) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1205) wifi_init: rx ba win: 6[0m
+[0;32mI (1208) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1212) wifi_init: udp mbox: 6[0m
+[0;32mI (1216) wifi_init: tcp mbox: 6[0m
+[0;32mI (1220) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1224) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1228) wifi_init: tcp mss: 1440[0m
+[0;32mI (1232) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1237) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1253) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (1253) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (1290) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (1299) wifi:mode : sta (f0:f5:bd:43:6f:2c)[0m
+[0;32mI (1300) wifi:enable tsf[0m
+[0;32mI (1301) UAC2-SIP-HEADSET: Wi-Fi station initialized. Connecting to HUAWEI-5G-aFY9...[0m
+[0;32mI (1305) UAC2-SIP-HEADSET: Initializing mute button...[0m
+[0;32mI (1310) UAC2-SIP-HEADSET: Initializing mute button on GPIO 10...[0m
+[0;32mI (1317) gpio: GPIO[10]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (1327) UAC2-SIP-HEADSET: Mute button initialized (GPIO 10, Active Low)[0m
+[0;32mI (1334) UAC2-SIP-HEADSET:    Press button to toggle mute/unmute[0m
+[0;32mI (1340) UAC2-SIP-HEADSET:    Hold for 2+ seconds for long press action[0m
+[0;32mI (1348) UAC2-SIP-HEADSET: Initializing headset hardware...[0m
+[0;32mI (1354) UAC2-SIP-HEADSET: Initializing audio bridge...[0m
+[0;32mI (1360) UAC2-SIP-HEADSET: Initializing lightweight audio bridge...[0m
+[0;32mI (1367) UAC2-SIP-HEADSET: RTP bridge task started[0m
+[0;32mI (1372) UAC2-SIP-HEADSET: Lightweight audio bridge initialized[0m
+[0;32mI (1379) UAC2-SIP-HEADSET: Hardware stabilization...[0m
+[0;32mI (2921) UAC2-SIP-HEADSET: Testing headset hardware...[0m
+[0;32mI (2921) UAC2-SIP-HEADSET: Testing mute button...[0m
+[0;32mI (2921) UAC2-SIP-HEADSET:    Button state: RELEASED (level=1)[0m
+[0;32mI (2926) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1[0m
+[0;32mI (2934) wifi:state: init -> auth (b0)[0m
+[0;32mI (2938) UAC2-SIP-HEADSET: Headset test completed[0m
+[0;32mI (2946) wifi:state: auth -> assoc (0)[0m
+[0;32mI (2961) wifi:state: assoc -> run (10)[0m
+[0;32mI (2980) wifi:connected with HUAWEI-5G-aFY9, aid = 8, channel 11, BW20, bssid = 96:90:10:5e:29:18[0m
+[0;32mI (2981) wifi:security: WPA2-PSK, phy: bgn, rssi: -52[0m
+[0;32mI (2989) wifi:pm start, type: 1[0m
+
+[0;32mI (2989) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2994) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3060) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4443) UAC2-SIP-HEADSET: Initializing UAC2 device...[0m
+[0;32mI (4444) usbd_uac: UAC Device Start, Version: 1.2.0[0m
+[0;32mI (4444) UAC2-SIP-HEADSET: [0m
+[0;32mI (4447) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (4454) UAC2-SIP-HEADSET:   RTP AUDIO BRIDGE READY![0m
+[0;32mI (4459) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (4467) UAC2-SIP-HEADSET: [0m
+[0;32mI (4470) UAC2-SIP-HEADSET: ✓ USB Audio Device: Ready for Android/PC[0m
+[0;32mI (4477) UAC2-SIP-HEADSET: ✓ Wi-Fi: Connecting to HUAWEI-5G-aFY9...[0m
+[0;32mI (4484) UAC2-SIP-HEADSET: ✓ SIP Client: Will auto-register when Wi-Fi connects[0m
+[0;32mI (4493) UAC2-SIP-HEADSET: ✓ RTP Engine: G.711 μ-law codec ready[0m
+[0;32mI (4499) UAC2-SIP-HEADSET: ✓ Audio Bridge: USB ↔ SIP routing ACTIVE[0m
+[0;32mI (4507) UAC2-SIP-HEADSET: ✓ Mute Button: Press to toggle microphone[0m
+[0;32mI (4514) UAC2-SIP-HEADSET: [0m
+[0;32mI (4517) UAC2-SIP-HEADSET: Audio Flow:[0m
+[0;32mI (4522) UAC2-SIP-HEADSET:    Android → USB → ESP32 → RTP → SIP Server[0m
+[0;32mI (4530) UAC2-SIP-HEADSET:    Android ← USB ← ESP32 ← RTP ← SIP Server[0m
+[0;32mI (4538) UAC2-SIP-HEADSET: ===========================================[0m
+[0;32mI (6503) esp_netif_handlers: sta ip: 192.168.18.55, mask: 255.255.255.0, gw: 192.168.18.1[0m
+[0;32mI (6504) UAC2-SIP-HEADSET: Wi-Fi connected! IP: 192.168.18.55[0m
+[0;32mI (6508) UAC2-SIP-HEADSET: Starting SIP client...[0m
+[0;32mI (6514) UAC2-SIP-HEADSET: 🔍 Testing SIP server connectivity...[0m
+[0;32mI (6522) UAC2-SIP-HEADSET: ✅ Network path to SIP server seems OK[0m
+[0;32mI (6528) UAC2-SIP-HEADSET: Initializing SIP client with RTP support...[0m
+[0;32mI (6534) UAC2-SIP-HEADSET: Initializing RTP session...[0m
+[0;32mI (6541) UAC2-SIP-HEADSET: RTP session initialized:[0m
+[0;32mI (6546) UAC2-SIP-HEADSET:   SSRC: 0x9a1f9ca0[0m
+[0;32mI (6551) UAC2-SIP-HEADSET:   Local port: 20000[0m
+[0;32mI (6556) UAC2-SIP-HEADSET:   Payload type: 0 (G.711 μ-law)[0m
+[0;32mI (6562) UAC2-SIP-HEADSET: SIP client with RTP support initialized[0m
+[0;32mI (6562) UAC2-SIP-HEADSET: SIP client task started[0m
+[0;32mI (6575) UAC2-SIP-HEADSET: SIP socket created[0m
+[0;32mI (6580) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (6586) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (6591) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (6597) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (6603) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (6607) UAC2-SIP-HEADSET:    Call-ID: 5aa96048@192.168.18.55[0m
+[0;32mI (6614) UAC2-SIP-HEADSET:    CSeq: 2[0m
+[0;32mI (6618) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (6624) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK3e4de73b
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=2a42f20b
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 5aa96048@192.168.18.55
+CSeq: 2 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (6660) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (6668) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;33mW (16776) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (16876) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (16876) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (16876) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (16882) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (16888) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (16893) UAC2-SIP-HEADSET:    Call-ID: c8530103@192.168.18.55[0m
+[0;32mI (16899) UAC2-SIP-HEADSET:    CSeq: 3[0m
+[0;32mI (16904) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (16910) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK46d8b06b
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=4b85beb2
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: c8530103@192.168.18.55
+CSeq: 3 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (16946) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (16954) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;32mI (19451) wifi:<ba-add>idx:0 (ifx:0, 96:90:10:5e:29:18), tid:0, ssn:1, winSize:64[0m
+[0;32mI (19545) UAC2-SIP-HEADSET: System Status #1:[0m
+[0;32mI (19546) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (19547) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (19552) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (19557) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (19562) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (19568) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (19573) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (19578) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (19583) UAC2-SIP-HEADSET: Free heap: 8557956 bytes[0m
+[0;32mI (19589) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (19596) UAC2-SIP-HEADSET: [0m
+[0;33mW (27061) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (27161) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (27161) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (27161) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (27167) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (27173) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (27178) UAC2-SIP-HEADSET:    Call-ID: 5b4cd9d1@192.168.18.55[0m
+[0;32mI (27184) UAC2-SIP-HEADSET:    CSeq: 4[0m
+[0;32mI (27189) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (27195) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK01b1941e
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=e216496b
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 5b4cd9d1@192.168.18.55
+CSeq: 4 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (27231) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (27238) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;32mI (34599) UAC2-SIP-HEADSET: System Status #2:[0m
+[0;32mI (34600) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (34601) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (34606) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (34611) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (34616) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (34622) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (34628) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (34632) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (34637) UAC2-SIP-HEADSET: Free heap: 8557956 bytes[0m
+[0;32mI (34643) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (34650) UAC2-SIP-HEADSET: [0m
+[0;33mW (37346) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (37446) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (37446) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (37446) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (37452) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (37458) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (37463) UAC2-SIP-HEADSET:    Call-ID: 57a0279f@192.168.18.55[0m
+[0;32mI (37469) UAC2-SIP-HEADSET:    CSeq: 5[0m
+[0;32mI (37474) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (37480) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK645d0f9a
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=dc81085a
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 57a0279f@192.168.18.55
+CSeq: 5 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (37516) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (37524) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;33mW (47632) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (47732) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (47732) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (47732) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (47739) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (47744) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (47749) UAC2-SIP-HEADSET:    Call-ID: 34e7ec91@192.168.18.55[0m
+[0;32mI (47756) UAC2-SIP-HEADSET:    CSeq: 6[0m
+[0;32mI (47760) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (47766) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK1c46c4d2
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=8bccd414
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 34e7ec91@192.168.18.55
+CSeq: 6 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (47802) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (47810) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;32mI (49653) UAC2-SIP-HEADSET: System Status #3:[0m
+[0;32mI (49654) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (49655) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (49660) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (49665) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (49670) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (49676) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (49682) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (49686) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (49691) UAC2-SIP-HEADSET: Free heap: 8557956 bytes[0m
+[0;32mI (49697) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (49704) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (49711) UAC2-SIP-HEADSET: [0m
+[0;33mW (57918) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (58018) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (58018) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (58018) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (58025) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (58030) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (58035) UAC2-SIP-HEADSET:    Call-ID: ff500800@192.168.18.55[0m
+[0;32mI (58042) UAC2-SIP-HEADSET:    CSeq: 7[0m
+[0;32mI (58046) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (58052) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK8bbb860c
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=a311f136
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: ff500800@192.168.18.55
+CSeq: 7 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (58088) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (58096) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;32mI (58983) wifi:<ba-add>idx:1 (ifx:0, 96:90:10:5e:29:18), tid:6, ssn:2, winSize:64[0m
+[0;32mI (64714) UAC2-SIP-HEADSET: System Status #4:[0m
+[0;32mI (64715) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (64717) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (64721) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (64726) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (64731) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (64737) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (64743) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (64747) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (64752) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (64758) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (64765) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (64772) UAC2-SIP-HEADSET: [0m
+[0;33mW (68204) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;31mE (68204) UAC2-SIP-HEADSET: SIP registration failed after 5 retries[0m
+[0;32mI (79775) UAC2-SIP-HEADSET: System Status #5:[0m
+[0;32mI (79776) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (79778) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (79782) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (79787) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (79792) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (79798) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (79804) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (79808) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (79813) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (79819) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (79826) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (79833) UAC2-SIP-HEADSET: [0m
+[0;32mI (94836) UAC2-SIP-HEADSET: System Status #6:[0m
+[0;32mI (94838) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (94839) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (94843) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (94848) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (94853) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (94859) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (94865) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (94869) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (94874) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (94880) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (94887) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (94894) UAC2-SIP-HEADSET: [0m
+[0;32mI (98306) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (98306) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (98307) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (98313) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (98318) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (98323) UAC2-SIP-HEADSET:    Call-ID: a6c9fed1@192.168.18.55[0m
+[0;32mI (98330) UAC2-SIP-HEADSET:    CSeq: 8[0m
+[0;32mI (98334) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (98340) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK3d92482a
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=f1331f26
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: a6c9fed1@192.168.18.55
+CSeq: 8 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (98376) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (98384) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;33mW (108492) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (108592) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (108592) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (108593) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (108599) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (108605) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (108609) UAC2-SIP-HEADSET:    Call-ID: 556cc0bf@192.168.18.55[0m
+[0;32mI (108616) UAC2-SIP-HEADSET:    CSeq: 9[0m
+[0;32mI (108621) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (108626) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bKe0ea6e65
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=93c1f1f9
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 556cc0bf@192.168.18.55
+CSeq: 9 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (108663) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (108670) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (367 bytes) - Waiting for response...[0m
+[0;32mI (109897) UAC2-SIP-HEADSET: System Status #7:[0m
+[0;32mI (109899) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (109900) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (109905) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (109910) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (109914) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (109921) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (109926) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (109931) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (109936) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (109942) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (109949) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (109956) UAC2-SIP-HEADSET: [0m
+[0;33mW (118779) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (118879) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (118879) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (118880) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (118886) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (118892) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (118896) UAC2-SIP-HEADSET:    Call-ID: 26aa368d@192.168.18.55[0m
+[0;32mI (118903) UAC2-SIP-HEADSET:    CSeq: 10[0m
+[0;32mI (118908) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (118913) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK7bb58a43
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=3919a6d6
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 26aa368d@192.168.18.55
+CSeq: 10 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (118950) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (118958) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (124959) UAC2-SIP-HEADSET: System Status #8:[0m
+[0;32mI (124960) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (124962) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (124967) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (124972) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (124976) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (124983) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (124988) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (124993) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (124998) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (125004) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (125011) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (125018) UAC2-SIP-HEADSET: [0m
+[0;33mW (129066) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (129166) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (129166) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (129167) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (129173) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (129179) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (129183) UAC2-SIP-HEADSET:    Call-ID: e5f2d97a@192.168.18.55[0m
+[0;32mI (129190) UAC2-SIP-HEADSET:    CSeq: 11[0m
+[0;32mI (129195) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (129200) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bKe95fd7d8
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=d90f985e
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: e5f2d97a@192.168.18.55
+CSeq: 11 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (129237) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (129245) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (139353) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (139453) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (139453) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (139454) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (139460) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (139466) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (139470) UAC2-SIP-HEADSET:    Call-ID: 44c98d23@192.168.18.55[0m
+[0;32mI (139477) UAC2-SIP-HEADSET:    CSeq: 12[0m
+[0;32mI (139482) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (139487) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK46c67cd7
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=1de7a050
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 44c98d23@192.168.18.55
+CSeq: 12 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (139524) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (139532) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (140021) UAC2-SIP-HEADSET: System Status #9:[0m
+[0;32mI (140023) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (140024) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (140029) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (140034) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (140038) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (140045) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (140050) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (140055) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (140060) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (140066) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (140073) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (140080) UAC2-SIP-HEADSET: [0m
+[0;33mW (149640) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (149740) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (149740) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (149741) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (149747) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (149753) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (149757) UAC2-SIP-HEADSET:    Call-ID: 16fae787@192.168.18.55[0m
+[0;32mI (149764) UAC2-SIP-HEADSET:    CSeq: 13[0m
+[0;32mI (149769) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (149774) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK2078c6d2
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=339b2387
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 16fae787@192.168.18.55
+CSeq: 13 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (149811) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (149819) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (155083) UAC2-SIP-HEADSET: System Status #10:[0m
+[0;32mI (155084) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (155085) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (155091) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (155096) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (155100) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (155107) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (155112) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (155117) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (155122) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (155128) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (155135) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (155142) UAC2-SIP-HEADSET: [0m
+[0;33mW (159927) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;31mE (159927) UAC2-SIP-HEADSET: SIP registration failed after 5 retries[0m
+[0;32mI (170145) UAC2-SIP-HEADSET: System Status #11:[0m
+[0;32mI (170146) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (170147) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (170153) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (170158) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (170162) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (170169) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (170174) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (170179) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (170184) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (170190) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (170197) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (170204) UAC2-SIP-HEADSET: [0m
+[0;32mI (185207) UAC2-SIP-HEADSET: System Status #12:[0m
+[0;32mI (185208) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (185209) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (185215) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (185220) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (185224) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (185231) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (185236) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (185241) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (185246) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (185252) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (185259) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (185266) UAC2-SIP-HEADSET: [0m
+[0;32mI (190030) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (190030) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (190031) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (190037) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (190043) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (190048) UAC2-SIP-HEADSET:    Call-ID: 597d10e6@192.168.18.55[0m
+[0;32mI (190054) UAC2-SIP-HEADSET:    CSeq: 14[0m
+[0;32mI (190059) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (190065) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK825d36f7
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=a771cd5c
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 597d10e6@192.168.18.55
+CSeq: 14 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (190101) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (190109) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (200217) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (200269) UAC2-SIP-HEADSET: System Status #13:[0m
+[0;32mI (200270) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (200271) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (200276) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (200281) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (200286) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (200293) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (200298) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (200303) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (200308) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (200314) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (200317) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (200326) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (200327) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (200340) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (200346) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (200352) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (200356) UAC2-SIP-HEADSET:    Call-ID: 950a4618@192.168.18.55[0m
+[0;32mI (200363) UAC2-SIP-HEADSET:    CSeq: 15[0m
+[0;32mI (200368) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (200373) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK29fd132d
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=96a4e467
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 950a4618@192.168.18.55
+CSeq: 15 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (200388) UAC2-SIP-HEADSET: [0m
+[0;32mI (200410) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (200421) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (210529) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (210629) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (210630) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (210630) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (210636) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (210642) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (210647) UAC2-SIP-HEADSET:    Call-ID: b80e53b1@192.168.18.55[0m
+[0;32mI (210653) UAC2-SIP-HEADSET:    CSeq: 16[0m
+[0;32mI (210658) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (210664) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bKccd3be0e
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=a01188ac
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: b80e53b1@192.168.18.55
+CSeq: 16 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (210700) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (210708) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (215422) UAC2-SIP-HEADSET: System Status #14:[0m
+[0;32mI (215423) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (215425) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (215430) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (215435) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (215439) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (215446) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (215451) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (215456) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (215461) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (215467) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (215474) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (215481) UAC2-SIP-HEADSET: [0m
+[0;33mW (220816) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (220916) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (220916) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (220917) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (220923) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (220929) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (220933) UAC2-SIP-HEADSET:    Call-ID: 1f233712@192.168.18.55[0m
+[0;32mI (220940) UAC2-SIP-HEADSET:    CSeq: 17[0m
+[0;32mI (220945) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (220950) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK6d527f40
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=2d49429e
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 1f233712@192.168.18.55
+CSeq: 17 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (220987) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (220995) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (230484) UAC2-SIP-HEADSET: System Status #15:[0m
+[0;32mI (230485) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (230487) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (230492) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (230497) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (230501) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (230508) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (230513) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (230518) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (230523) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (230529) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (230536) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (230543) UAC2-SIP-HEADSET: [0m
+[0;33mW (231103) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (231203) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (231203) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (231204) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (231210) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (231216) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (231221) UAC2-SIP-HEADSET:    Call-ID: fee9e896@192.168.18.55[0m
+[0;32mI (231227) UAC2-SIP-HEADSET:    CSeq: 18[0m
+[0;32mI (231232) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (231238) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK4e637f88
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=34de9cb4
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: fee9e896@192.168.18.55
+CSeq: 18 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (231274) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (231282) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (241390) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (241490) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (241490) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (241491) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (241497) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (241503) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (241507) UAC2-SIP-HEADSET:    Call-ID: 61e0b09f@192.168.18.55[0m
+[0;32mI (241514) UAC2-SIP-HEADSET:    CSeq: 19[0m
+[0;32mI (241519) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (241524) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK6d33b4d2
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=11863075
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 61e0b09f@192.168.18.55
+CSeq: 19 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (241561) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (241569) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (245546) UAC2-SIP-HEADSET: System Status #16:[0m
+[0;32mI (245547) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (245549) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (245554) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (245559) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (245563) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (245570) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (245575) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (245580) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (245585) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (245591) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (245598) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (245605) UAC2-SIP-HEADSET: [0m
+[0;33mW (251677) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;31mE (251677) UAC2-SIP-HEADSET: SIP registration failed after 5 retries[0m
+[0;32mI (260608) UAC2-SIP-HEADSET: System Status #17:[0m
+[0;32mI (260610) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (260611) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (260616) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (260621) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (260625) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (260632) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (260637) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (260642) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (260647) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (260653) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (260660) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (260667) UAC2-SIP-HEADSET: [0m
+[0;32mI (275670) UAC2-SIP-HEADSET: System Status #18:[0m
+[0;32mI (275671) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (275673) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (275678) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (275683) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (275687) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (275694) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (275699) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (275704) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (275709) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (275715) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (275722) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (275729) UAC2-SIP-HEADSET: [0m
+[0;32mI (281780) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (281780) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (281781) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (281787) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (281793) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (281798) UAC2-SIP-HEADSET:    Call-ID: 55967221@192.168.18.55[0m
+[0;32mI (281804) UAC2-SIP-HEADSET:    CSeq: 20[0m
+[0;32mI (281809) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (281815) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bKf2a52380
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=748856b2
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 55967221@192.168.18.55
+CSeq: 20 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (281851) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (281859) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (290732) UAC2-SIP-HEADSET: System Status #19:[0m
+[0;32mI (290733) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (290735) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (290740) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (290745) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (290749) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (290756) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (290761) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (290766) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (290771) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (290777) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (290784) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (290791) UAC2-SIP-HEADSET: [0m
+[0;33mW (291967) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (292067) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (292067) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (292068) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (292074) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (292080) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (292084) UAC2-SIP-HEADSET:    Call-ID: 48625e67@192.168.18.55[0m
+[0;32mI (292091) UAC2-SIP-HEADSET:    CSeq: 21[0m
+[0;32mI (292096) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (292101) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK695d2805
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=ac0e0b1a
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 48625e67@192.168.18.55
+CSeq: 21 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (292138) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (292146) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (302254) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (302354) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (302354) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (302355) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (302361) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (302367) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (302371) UAC2-SIP-HEADSET:    Call-ID: 31f32984@192.168.18.55[0m
+[0;32mI (302378) UAC2-SIP-HEADSET:    CSeq: 22[0m
+[0;32mI (302383) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (302388) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK0a3e7a68
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=bd602aaf
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 31f32984@192.168.18.55
+CSeq: 22 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (302425) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (302433) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (305794) UAC2-SIP-HEADSET: System Status #20:[0m
+[0;32mI (305795) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (305797) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (305802) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (305807) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (305811) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (305818) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (305823) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (305828) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (305833) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (305839) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (305846) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (305853) UAC2-SIP-HEADSET: [0m
+[0;33mW (312541) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (312641) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (312641) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (312642) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (312648) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (312654) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (312658) UAC2-SIP-HEADSET:    Call-ID: 628c5405@192.168.18.55[0m
+[0;32mI (312665) UAC2-SIP-HEADSET:    CSeq: 23[0m
+[0;32mI (312670) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (312675) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK64d41f98
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=4cfb601a
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 628c5405@192.168.18.55
+CSeq: 23 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (312712) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (312720) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (320856) UAC2-SIP-HEADSET: System Status #21:[0m
+[0;32mI (320857) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (320859) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (320864) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (320869) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (320873) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (320880) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (320885) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (320890) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (320895) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (320901) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (320908) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (320915) UAC2-SIP-HEADSET: [0m
+[0;33mW (322828) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (322928) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (322928) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (322929) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (322935) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (322941) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (322945) UAC2-SIP-HEADSET:    Call-ID: 71bc19cc@192.168.18.55[0m
+[0;32mI (322952) UAC2-SIP-HEADSET:    CSeq: 24[0m
+[0;32mI (322957) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (322962) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK69bb4cf0
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=f5c910e1
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 71bc19cc@192.168.18.55
+CSeq: 24 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (322999) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (323007) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (333115) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (333215) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (333215) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (333216) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (333222) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (333228) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (333232) UAC2-SIP-HEADSET:    Call-ID: b62cad40@192.168.18.55[0m
+[0;32mI (333239) UAC2-SIP-HEADSET:    CSeq: 25[0m
+[0;32mI (333244) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (333249) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bKae599a88
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=c0e913fa
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: b62cad40@192.168.18.55
+CSeq: 25 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (333286) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (333294) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (335918) UAC2-SIP-HEADSET: System Status #22:[0m
+[0;32mI (335919) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (335921) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (335926) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (335931) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (335935) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (335942) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (335947) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (335952) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (335957) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (335963) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (335970) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (335977) UAC2-SIP-HEADSET: [0m
+[0;33mW (343402) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;31mE (343402) UAC2-SIP-HEADSET: SIP registration failed after 5 retries[0m
+[0;32mI (350980) UAC2-SIP-HEADSET: System Status #23:[0m
+[0;32mI (350981) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (350983) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (350988) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (350993) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (350997) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (351004) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (351009) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (351014) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (351019) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (351025) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (351032) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (351039) UAC2-SIP-HEADSET: [0m
+[0;32mI (366042) UAC2-SIP-HEADSET: System Status #24:[0m
+[0;32mI (366044) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (366045) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (366050) UAC2-SIP-HEADSET: SIP: DISCONNECTED[0m
+[0;32mI (366055) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (366059) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (366066) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (366071) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (366076) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (366081) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (366087) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (366094) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (366101) UAC2-SIP-HEADSET: [0m
+[0;32mI (373505) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (373505) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (373506) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (373512) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (373518) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (373523) UAC2-SIP-HEADSET:    Call-ID: d4a156ec@192.168.18.55[0m
+[0;32mI (373529) UAC2-SIP-HEADSET:    CSeq: 26[0m
+[0;32mI (373534) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (373540) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bKdb246297
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=c1039f05
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: d4a156ec@192.168.18.55
+CSeq: 26 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (373576) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (373584) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (381104) UAC2-SIP-HEADSET: System Status #25:[0m
+[0;32mI (381105) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (381107) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (381112) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (381117) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (381121) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (381128) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (381133) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (381138) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (381143) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (381149) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (381156) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (381163) UAC2-SIP-HEADSET: [0m
+[0;33mW (383692) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (383792) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (383792) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (383793) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (383799) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (383805) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (383809) UAC2-SIP-HEADSET:    Call-ID: a0e46dd9@192.168.18.55[0m
+[0;32mI (383816) UAC2-SIP-HEADSET:    CSeq: 27[0m
+[0;32mI (383821) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (383826) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK0a949a34
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=a7718fda
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: a0e46dd9@192.168.18.55
+CSeq: 27 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (383863) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (383871) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;33mW (393979) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (394079) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (394079) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (394080) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (394086) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (394092) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (394096) UAC2-SIP-HEADSET:    Call-ID: 61367ae0@192.168.18.55[0m
+[0;32mI (394103) UAC2-SIP-HEADSET:    CSeq: 28[0m
+[0;32mI (394108) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (394113) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK02441259
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=8cc5f35d
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 61367ae0@192.168.18.55
+CSeq: 28 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (394150) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (394158) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (396166) UAC2-SIP-HEADSET: System Status #26:[0m
+[0;32mI (396168) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (396169) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (396174) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (396179) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (396183) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (396190) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (396195) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (396200) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (396205) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (396211) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (396218) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (396225) UAC2-SIP-HEADSET: [0m
+[0;33mW (404266) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (404366) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (404366) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (404367) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (404373) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (404379) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (404383) UAC2-SIP-HEADSET:    Call-ID: d9bcaf63@192.168.18.55[0m
+[0;32mI (404390) UAC2-SIP-HEADSET:    CSeq: 29[0m
+[0;32mI (404395) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (404400) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK6f51c700
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=be5bb208
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: d9bcaf63@192.168.18.55
+CSeq: 29 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (404437) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (404445) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
+[0;32mI (411228) UAC2-SIP-HEADSET: System Status #27:[0m
+[0;32mI (411229) UAC2-SIP-HEADSET: 📡 Wireshark test packet: SENT (38 bytes)[0m
+[0;32mI (411230) UAC2-SIP-HEADSET: Wi-Fi: CONNECTED (%d.%d.%d.%d)[0m
+[0;32mI (411236) UAC2-SIP-HEADSET: SIP: REGISTERING[0m
+[0;32mI (411241) UAC2-SIP-HEADSET: RTP: STANDBY[0m
+[0;32mI (411245) UAC2-SIP-HEADSET: Microphone: 0 callbacks (ACTIVE )[0m
+[0;32mI (411252) UAC2-SIP-HEADSET: Speaker: 0 callbacks[0m
+[0;32mI (411257) UAC2-SIP-HEADSET: Mute toggles: 0[0m
+[0;32mI (411262) UAC2-SIP-HEADSET: Button: RELEASED[0m
+[0;32mI (411267) UAC2-SIP-HEADSET: Free heap: 8557884 bytes[0m
+[0;32mI (411273) UAC2-SIP-HEADSET: USB Audio: Waiting for connection...[0m
+[0;32mI (411280) UAC2-SIP-HEADSET: Status: SIP registration in progress...[0m
+[0;32mI (411287) UAC2-SIP-HEADSET: [0m
+[0;33mW (414553) UAC2-SIP-HEADSET: SIP registration timeout, retrying...[0m
+[0;32mI (414653) UAC2-SIP-HEADSET: Attempting SIP registration...[0m
+[0;32mI (414653) UAC2-SIP-HEADSET: 🔍 SIP REGISTER DEBUG:[0m
+[0;32mI (414654) UAC2-SIP-HEADSET:    Target: 78.46.21.240:35060[0m
+[0;32mI (414660) UAC2-SIP-HEADSET:    Local IP: 192.168.18.55[0m
+[0;32mI (414666) UAC2-SIP-HEADSET:    User: 1001[0m
+[0;32mI (414670) UAC2-SIP-HEADSET:    Call-ID: 72ee2998@192.168.18.55[0m
+[0;32mI (414677) UAC2-SIP-HEADSET:    CSeq: 30[0m
+[0;32mI (414682) UAC2-SIP-HEADSET: 📤 SENDING SIP MESSAGE:[0m
+[0;32mI (414687) UAC2-SIP-HEADSET: REGISTER sip:78.46.21.240:35060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.18.55:35060;branch=z9hG4bK2b602058
+Max-Forwards: 70
+From: <sip:1001@78.46.21.240:35060>;tag=09494953
+To: <sip:1001@78.46.21.240:35060>
+Call-ID: 72ee2998@192.168.18.55
+CSeq: 30 REGISTER
+Contact: <sip:1001@192.168.18.55:35060>
+Expires: 3600
+User-Agent: ESP32-S3-UAC-SIP/1.0
+Content-Length: 0
+
+[0m
+[0;32mI (414724) UAC2-SIP-HEADSET: 🌐 Testing network connectivity...[0m
+[0;32mI (414732) UAC2-SIP-HEADSET: ✅ SIP REGISTER sent (368 bytes) - Waiting for response...[0m
